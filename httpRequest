@@ -2,21 +2,20 @@
 <html>
 <body>
 
-
 <div></div>
-
-
 
 <script>
 
+	var xmlHttp = new XMLHttpRequest();
 
-
-
+	Dictionary<string, string> keys = new Dictionary<string, string>{
+	
+		{"token","http://challenge.code2040.org/api/register"},
+		{"github","https://github.com/DiegoAMedina/Code2040.git"}
+	
+	};
 
 </script>
-
-
-
 
 </body>
 </html>
