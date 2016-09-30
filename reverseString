@@ -1,12 +1,8 @@
 import requests
 import json
 
-
-
 # python dictionary with api token and string variable
 dictionary = {'token':'e2f2c742e71d0ea6a9f5e02545228de9', 'string':''}
-
-
 
 #-------------------------------------------- convert dictionary to json
 
@@ -15,4 +11,23 @@ dumps_dictionary = json.dumps(dictionary)
 
 # convert json string to json dictionary
 loads_dictionary = json.loads(dumps_dictionary)
+
+
+#-------------------------------------------- retrieve string to be reversed and reversal
+
+reverseStr = requests.post('http://challenge.code2040.org/api/reverse', loads_dictionary)
+
+
+# loop will reverse the given string
+# length of string / 2 so it only loops the necessary amount of times, which is half of the length of the string
+for(int i = 0; i < len(reverseStr) / 2; i++):
+	temp = reverseStr[i]
+	reverseStr[i] = reverseStr[ len(reverseStr) - i - 1]
+	reverseStr[ len(reverseStr) - i - 1] = temp
+	
+	
+#-------------------------------------------- return the reversed string
+
+ 
+
 
