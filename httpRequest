@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-<body>
+import requests # requests http
+import json	# json dictionary
 
-<div></div>
 
-<script>
 
-	var xmlHttp = new XMLHttpRequest();
+# dictionary with two keys
+# token with api url and github with github link 
+twoKeys = {"token":"http://challenge.code2040.org/api/register", "github":"https://github.com/DiegoAMedina/Code2040.git"}
 
-	Dictionary<string, string> keys = new Dictionary<string, string>{
-	
-		{"token","http://challenge.code2040.org/api/register"},
-		{"github","https://github.com/DiegoAMedina/Code2040.git"}
-	
-	};
 
-</script>
 
-</body>
-</html>
+
+
