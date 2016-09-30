@@ -14,3 +14,13 @@ dumps_dictionary = json.dumps(dictionary)
 
 # convert json string to json dictionary
 loads_dictionary = json.loads(dumps_dictionary)
+
+#--------------------------------------- retrieve json dictionary & convert to python dictionary
+
+# post will return a dictionary with "prefix" and "array"
+dictionaryRequest = requests.post('http://challenge.code2040.org/api/prefix', loads_dictionary)
+
+# converts dictionary into json dictionary
+dictionaryRequest = dictionaryRequest.json()
+
+print dictionaryRequest
