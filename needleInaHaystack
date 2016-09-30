@@ -1,0 +1,28 @@
+import requests
+import json
+import ast		# convert string to dictionary
+
+# python dictionary
+dictionary = {'token':'e2f2c742e71d0ea6a9f5e02545228de9', 'needle':''}
+
+
+#-------------------------------------------- convert dictionary to json
+
+# convert python dictionary to json string
+dumps_dictionary = json.dumps(dictionary)
+
+# convert json string to json dictionary
+loads_dictionary = json.loads(dumps_dictionary)
+
+
+#-------------------------------------------- retrieve json dictionary
+
+# post will return a dictionary with "needle" and "haystack"
+dictionaryRequest = requests.post('http://challenge.code2040.org/api/haystack', loads_dictionary)
+
+# request returned a class and converting to a string
+dictionaryRequest = str(dictionaryRequest.text)
+
+# converting the string into a dictionary
+dictionaryRequest = ast.literal_eval(dictionaryRequest)
+
