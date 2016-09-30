@@ -44,5 +44,11 @@ for key in dictionaryRequest['array']:
 
 newDictionary = {'token':'e2f2c742e71d0ea6a9f5e02545228de9', 'array': newList}
  
+#-------------------------------------- convert new python dictionary to json dictionary
+
+r = requests.post('http://challenge.code2040.org/api/prefix/validate', json = newDictionary) 
+
+print r.content
+ 
 
 
