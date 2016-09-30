@@ -26,3 +26,24 @@ dictionaryRequest = str(dictionaryRequest.text)
 # converting the string into a dictionary
 dictionaryRequest = ast.literal_eval(dictionaryRequest)
 
+
+#-------------------------------------------- find the needle in the haystack
+
+
+index = 0
+
+# iterate through dictionary to find the needle string in the haystack string
+for key in dictionaryRequest['haystack']:
+	
+	if key == dictionaryRequest['needle']:
+		break
+	
+	else:
+		index += 1
+
+
+loads_dictionary['needle'] = index
+
+requests.post('http://challenge.code2040.org/api/haystack/validate', loads_dictionary)
+
+
