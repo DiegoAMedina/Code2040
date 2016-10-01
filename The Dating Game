@@ -22,3 +22,13 @@ minutes = int( timeStamp[14:-4] )
 seconds = int( timeStamp[17:-1] )
 interval = int( dictionaryRequest['interval'] )
 
+#--------------------------------------- Determine how many minutes there are in the interval
+
+#first check how many minutes there are in the interval to add them to the minutes and the left to the seconds
+minutes += ( interval / 60 )
+seconds += ( interval - ( (interval / 60) * 60) )
+
+# if there is more than 60 seconds then add one more minutes and subtract 60 from seconds
+if seconds >= 60:
+	minutes += 1
+	seconds -= 60
