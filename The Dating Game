@@ -89,6 +89,32 @@ dictWithToken['datestamp'] = newDateStamp
 	
 	
 	
+#--------------------------------------- Request post url
+
+requestsContents = requests.post('http://challenge.code2040.org/api/dating/validate', json = dictWithToken)
+
+print requestsContents.content
+
+
+
+#--------------------------------------- Debugging outputs
+
+
+print dictionaryRequest
+#print timeStamp
+'''
+print "year:", year
+print "month: ", month
+print "day:", day
+print "hours:", hours
+print "minutes:", minutes
+print "seconds:", seconds
+print "interval:", interval
+'''
+#print "new date stamp:", newDateStamp
+
+print dictWithToken
+
 	
 	
 	
