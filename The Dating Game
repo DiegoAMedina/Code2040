@@ -1,7 +1,7 @@
 
 import requests 
 import json
-import time
+
 
 dictWithToken = {'token':'e2f2c742e71d0ea6a9f5e02545228de9','datestamp':''}
 
@@ -12,6 +12,13 @@ dictionaryRequest = dictionaryRequest.json()
 
 timeStamp = dictionaryRequest['datestamp']
 
-print dictionaryRequest
-print timeStamp
-#print timeStamp[0]
+
+# Parsing the timestamp to individual variables to be able to manipulate them
+year = int( timeStamp[:4] )
+month = timeStamp[5:-13] 
+day = int( timeStamp[8:-10] )
+hours = int( timeStamp[11:-7] )
+minutes = int( timeStamp[14:-4] )
+seconds = int( timeStamp[17:-1] )
+interval = int( dictionaryRequest['interval'] )
+
