@@ -53,6 +53,39 @@ if hours >= 24:
 		day += 1
 
 	
+#--------------------------------------- Edit dictionary with new datestamp
+
+# Converting the variables back to strings to be able to add them to the dictionary
+year = str(year)
+month = str(month)
+day = str(day)
+hours = str(hours)
+minutes = str(minutes)
+seconds = str(seconds)
+
+
+# Adding "0" in front of the numbers to return the timestamp identical to the requirements asked by Code 2040
+if len(month) < 2:
+	month = "0" + month
+
+if len(day) < 2:
+	day = "0" + day
+
+if len(hours) < 2:
+	hours = "0" + hours
+
+if len(minutes) < 2:
+	minutes = "0" + minutes
+
+if len(seconds) < 2:
+	seconds = "0" + seconds
+
+
+# new datestamp in Code 2040 format
+newDateStamp = year + "-" + month + "-" + day + "T" + hours + ":" + minutes + ":" + seconds + "Z"
+
+# Assigning the new datestamp to the dictionary
+dictWithToken['datestamp'] = newDateStamp
 	
 	
 	
