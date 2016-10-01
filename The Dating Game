@@ -1,1 +1,17 @@
 
+import requests 
+import json
+import time
+
+dictWithToken = {'token':'e2f2c742e71d0ea6a9f5e02545228de9','datestamp':''}
+
+
+# retrieving json dictionary from code2040
+dictionaryRequest = requests.post('http://challenge.code2040.org/api/dating', dictWithToken)
+dictionaryRequest = dictionaryRequest.json()
+
+timeStamp = dictionaryRequest['datestamp']
+
+print dictionaryRequest
+print timeStamp
+#print timeStamp[0]
