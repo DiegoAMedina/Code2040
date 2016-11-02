@@ -5,7 +5,7 @@ import json		# json dictionary
 
 # dictionary with two keys
 # token with api url and github with github link 
-twoKeys = {'token':'e2f2c742e71d0ea6a9f5e02545228de9', 'github':'https://github.com/DiegoAMedina/Code2040.git'}
+twoKeys = {'token': token removed, 'github':'https://github.com/DiegoAMedina/Code2040.git'}
 
 
 
