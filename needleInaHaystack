@@ -3,7 +3,7 @@ import json
 import ast		# convert string to dictionary
 
 # python dictionary
-dictionary = {'token':'e2f2c742e71d0ea6a9f5e02545228de9', 'needle':''}
+dictionary = {'token': token removed, 'needle':''}
 
 
 #-------------------------------------------- convert dictionary to json
