@@ -3,7 +3,7 @@ import requests
 import json
 
 
-dictWithToken = {'token':'e2f2c742e71d0ea6a9f5e02545228de9','datestamp':''}
+dictWithToken = {'token': token removed,'datestamp':''}
 
 
 # retrieving json dictionary from code2040
