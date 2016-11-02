@@ -15,7 +15,7 @@ timeStamp = dictionaryRequest['datestamp']
 
 # Parsing the timestamp to individual variables to be able to manipulate them
 year = int( timeStamp[:4] )
-month = timeStamp[5:-13] 
+month = int( timeStamp[5:-13] )
 day = int( timeStamp[8:-10] )
 hours = int( timeStamp[11:-7] )
 minutes = int( timeStamp[14:-4] )
