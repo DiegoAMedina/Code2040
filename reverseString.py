@@ -4,7 +4,7 @@ import json
 
 
 # python dictionary with api token and string variable
-dictionary = {'token':'e2f2c742e71d0ea6a9f5e02545228de9', 'string':''}
+dictionary = {'token': token removed, 'string':''}
 
 
 
